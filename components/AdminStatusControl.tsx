@@ -79,7 +79,7 @@ export default function AdminStatusControl({
       </Button>
 
       {showControls && (
-        <div className="absolute top-full left-0 mt-1 bg-gray-900 border border-gray-700 rounded-md shadow-lg z-50 p-2 min-w-[120px]">
+        <div className="absolute top-full left-0 mt-1 bg-black border border-gray-700 rounded-md shadow-lg z-50 p-2 min-w-[120px]">
           <p className="text-xs text-gray-300 mb-2">Update Status:</p>
           <div className="space-y-1">
             {FEEDBACK_STATUSES.map((status) => (

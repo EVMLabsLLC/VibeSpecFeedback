@@ -259,7 +259,7 @@ export default function FeedbackList({ refreshTrigger, onOpenModal }: FeedbackLi
       ) : (
         <div className="space-y-3 sm:space-y-4">
           {sortedFeedback.map((item) => (
-            <Card key={item.id} className="card-hover">
+            <Card key={item.id}>
               <CardHeader className="pb-3 sm:pb-4 px-4 sm:px-6">
                 <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-3">
                   <div className="flex-1 min-w-0">
