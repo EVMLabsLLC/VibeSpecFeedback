@@ -1,0 +1,77 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          String   @id @default(cuid())
+  username    String   @unique
+  email       String   @unique
+  password    String
+  address     String?  @unique // Make optional for migration compatibility
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relations
+  feedback    Feedback[]
+  votes       FeedbackVote[]
+  responses   Response[]
+}
+
+model Feedback {
+  id          String     @id @default(cuid())
+  title       String
+  description String
+  tags        String[]   @default([])
+  upvotes     Int        @default(0)
+  status      String     @default("open") // Admin status: open, planned, in-progress, completed, rejected
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  
+  // Relations
+  authorId    String
+  author      User       @relation(fields: [authorId], references: [id])
+  votes       FeedbackVote[]
+  responses   Response[]
+}
+
+model FeedbackVote {
+  id         String   @id @default(cuid())
+  createdAt  DateTime @default(now())
+  
+  // Relations
+  userId     String
+  feedbackId String
+  user       User     @relation(fields: [userId], references: [id])
+  feedback   Feedback @relation(fields: [feedbackId], references: [id])
+  
+  // Ensure one vote per user per feedback
+  @@unique([userId, feedbackId])
+}
+
+model Response {
+  id          String   @id @default(cuid())
+  content     String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  // Relations
+  authorId    String
+  feedbackId  String
+  parentId    String?  // For nested responses (null = top-level response)
+  
+  author      User       @relation(fields: [authorId], references: [id])
+  feedback    Feedback   @relation(fields: [feedbackId], references: [id])
+  parent      Response?  @relation("ResponseReplies", fields: [parentId], references: [id])
+  replies     Response[] @relation("ResponseReplies")
+}
