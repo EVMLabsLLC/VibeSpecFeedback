@@ -1,6 +1,17 @@
 # VibeSpec Feedback Platform - Improvements Tracking
 
 ## Recent Fixes (Completed)
+- ✅ **Username Display Issue** - Fixed missing usernames for posts and responses
+  - Updated FeedbackList.tsx to display author usernames instead of wallet addresses
+  - Updated ResponseItem.tsx to show usernames in response threads
+  - Maintained admin badge display based on email addresses for admin users
+  - Fixed reply placeholder text to use usernames for better UX
+- ✅ **Open Graph Image Implementation** - Created comprehensive social media sharing setup
+  - Designed custom OG image (1200x630) matching platform branding with purple gradient theme
+  - Implemented complete OpenGraph meta tags for social media sharing
+  - Added Twitter Card support with proper image references
+  - Created SVG-based OG image featuring platform logo, tagline, and key features
+  - Enhanced SEO meta tags with proper robots configuration
 - ✅ **UI Styling Issues** - Fixed upvote button sizing and filter button colors
   - Reduced upvote button size from 60-70px to 44px width with smaller padding and icons
   - Changed filter button colors from purple to consistent primary color scheme
@@ -41,6 +52,12 @@
    - Add toast notifications for user actions
    - Improve form validation feedback
    - Add confirmation dialogs for destructive actions
+
+3. **SEO & Social Media** (1-2 hours)
+   - ✅ Open Graph image and meta tags implemented
+   - Add JSON-LD structured data for rich snippets
+   - Implement dynamic OG images for individual feedback posts
+   - Add favicon variations for different platforms
 
 ### High Impact / Medium Effort (Sprint Goals)
 1. **Real-time Updates** (4-6 hours)

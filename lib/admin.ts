@@ -45,7 +45,7 @@ export function isAdmin(email: string | undefined): boolean {
  */
 export function getAdminDisplayName(email: string): string | null {
   if (!isAdmin(email)) return null;
-  return "Oohhwwee Team";
+  return "Vibespec Team";
 }
 
 /**

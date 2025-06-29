@@ -44,7 +44,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
       } else {
         const result = await register(formData.username, formData.email, formData.password);
         if (result.success) {
-          showSuccess("Account created!", "Welcome to feedback.oohhwwee!");
+          showSuccess("Account created!", "Welcome to feedback.vibespec!");
           onClose();
           setFormData({ username: "", email: "", password: "" });
         } else {
@@ -78,7 +78,7 @@ export default function AuthModal({ isOpen, onClose }: AuthModalProps) {
           <CardDescription className="text-sm">
             {isLogin
               ? "Sign in to your account to continue"
-              : "Join the feedback.oohhwwee community"}
+              : "Join the feedback.vibespec community"}
           </CardDescription>
         </CardHeader>
         <CardContent className="px-0 sm:px-6">

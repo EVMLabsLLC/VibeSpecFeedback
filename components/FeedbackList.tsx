@@ -327,7 +327,17 @@ export default function FeedbackList({ refreshTrigger, onOpenModal }: FeedbackLi
                        <Clock className="h-3 w-3" />
                        {formatTimeAgo(item.createdAt.toString())}
                      </span>
-                     <span>by {item.author?.address ? getAdminDisplayName(item.author.address) : 'Unknown'}</span>
+                     <div className="flex items-center gap-2">
+                       <span>by {item.author?.username || 'Unknown'}</span>
+                       {item.author?.email && getAdminDisplayName(item.author.email) && (
+                         <Badge
+                           variant="default"
+                           className="text-xs bg-purple-100 text-purple-800 border-purple-200"
+                         >
+                           {getAdminDisplayName(item.author.email)}
+                         </Badge>
+                       )}
+                     </div>
                    </div>
                   
                                      <div className="flex items-center gap-2">

@@ -53,19 +53,16 @@ export default function ResponseItem({
           <div className="flex items-start justify-between mb-3">
             <div className="flex items-center space-x-2">
               <Badge variant="outline" className="text-xs">
-                {response.author.address ? 
-                  `${response.author.address.slice(0, 6)}...${response.author.address.slice(-4)}` :
-                  'Anonymous'
-                }
+                {response.author.username || 'Anonymous'}
               </Badge>
               
               {/* Admin Badge */}
-              {response.author.address && getAdminDisplayName(response.author.address) && (
+              {response.author.email && getAdminDisplayName(response.author.email) && (
                 <Badge
                   variant="default"
                   className="text-xs bg-purple-100 text-purple-800 border-purple-200"
                 >
-                  {getAdminDisplayName(response.author.address)}
+                  {getAdminDisplayName(response.author.email)}
                 </Badge>
               )}
               
@@ -118,7 +115,7 @@ export default function ResponseItem({
                 parentId={response.id}
                 onSubmit={handleReplySuccess}
                 onCancel={() => setShowReplyForm(false)}
-                placeholder={`Reply to ${response.author.address ? response.author.address.slice(0, 6) + '...' : 'user'}`}
+                placeholder={`Reply to ${response.author.username || 'user'}`}
               />
             </div>
           )}

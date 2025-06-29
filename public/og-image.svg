@@ -1,0 +1,93 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#000000"/>
+  
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B5CF6"/>
+      <stop offset="100%" style="stop-color:#2563EB"/>
+    </linearGradient>
+    <linearGradient id="iconGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B5CF6"/>
+      <stop offset="100%" style="stop-color:#2563EB"/>
+    </linearGradient>
+    <linearGradient id="iconGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#10B981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="iconGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F59E0B"/>
+      <stop offset="100%" style="stop-color:#EF4444"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Hero gradient background -->
+  <rect width="1200" height="630" fill="url(#heroGradient)"/>
+  
+  <!-- Main content area -->
+  <g transform="translate(80, 100)">
+    <!-- Title -->
+    <text x="0" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold" fill="#F8FAFC" letter-spacing="-0.02em">
+      feedback.vibespec
+    </text>
+    
+    <!-- Title gradient effect -->
+    <text x="0" y="80" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="bold" fill="url(#primaryGradient)" letter-spacing="-0.02em">
+      feedback.vibespec
+    </text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#94A3B8" letter-spacing="-0.01em">
+      Share your feedback, request features, and help us build
+    </text>
+    <text x="0" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#94A3B8" letter-spacing="-0.01em">
+      something amazing together.
+    </text>
+    
+    <!-- Feature icons and text -->
+    <g transform="translate(0, 280)">
+      <!-- Feature 1: Easy Feedback -->
+      <g>
+        <rect x="0" y="0" width="64" height="64" rx="16" fill="url(#iconGradient1)" opacity="0.9"/>
+        <!-- Message Square Plus Icon -->
+        <path d="M21 15a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-5.5L27 27.5 22.5 23H17a2 2 0 0 1-2-2z" fill="white" transform="translate(8, 8) scale(1.5)"/>
+        <path d="M32 28v4m-2-2h4" stroke="white" stroke-width="2" stroke-linecap="round" transform="translate(8, 8) scale(1.5)"/>
+        <text x="90" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#F8FAFC">Easy Feedback</text>
+        <text x="90" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#94A3B8">Simple interface for sharing thoughts</text>
+      </g>
+      
+      <!-- Feature 2: Community Driven -->
+      <g transform="translate(380, 0)">
+        <rect x="0" y="0" width="64" height="64" rx="16" fill="url(#iconGradient2)" opacity="0.9"/>
+        <!-- Users Icon -->
+        <circle cx="18" cy="20" r="4" fill="white" transform="translate(8, 8) scale(1.5)"/>
+        <circle cx="30" cy="20" r="4" fill="white" transform="translate(8, 8) scale(1.5)"/>
+        <path d="M44 32v-4a4 4 0 0 0-8 0v4" stroke="white" stroke-width="2" stroke-linecap="round" transform="translate(8, 8) scale(1.5)"/>
+        <path d="M4 32v-4a4 4 0 0 1 8 0v4" stroke="white" stroke-width="2" stroke-linecap="round" transform="translate(8, 8) scale(1.5)"/>
+        <text x="90" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#F8FAFC">Community Driven</text>
+        <text x="90" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#94A3B8">Upvote and prioritize together</text>
+      </g>
+      
+      <!-- Feature 3: Fast Response -->
+      <g transform="translate(760, 0)">
+        <rect x="0" y="0" width="64" height="64" rx="16" fill="url(#iconGradient3)" opacity="0.9"/>
+        <!-- Zap Icon -->
+        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" fill="white" transform="translate(16, 16) scale(2)"/>
+        <text x="90" y="25" font-family="system-ui, -apple-system, sans-serif" font-size="24" font-weight="600" fill="#F8FAFC">Fast Response</text>
+        <text x="90" y="50" font-family="system-ui, -apple-system, sans-serif" font-size="18" fill="#94A3B8">Track status and get updates</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Decorative elements -->
+  <g opacity="0.1">
+    <circle cx="1050" cy="150" r="100" fill="url(#primaryGradient)"/>
+    <circle cx="150" cy="500" r="60" fill="url(#iconGradient2)"/>
+    <circle cx="1100" cy="450" r="40" fill="url(#iconGradient3)"/>
+  </g>
+</svg> 
