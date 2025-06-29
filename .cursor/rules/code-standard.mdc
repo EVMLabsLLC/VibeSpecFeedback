@@ -1,0 +1,69 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+---
+alwaysApply: true
+description: |
+  This document outlines coding standards for a Next.js project intended for a startup MVP. Following these guidelines will ensure consistency, maintainability, and high code quality across the codebase.
+---
+
+# Coding Standards for Next.js Startup MVP
+
+## 1. Code Style
+
+### 1.1 Formatting
+- Use Prettier for consistent code formatting across the codebase.
+- Ensure that the following settings are used:
+  - Tab width: 2 spaces
+  - Single quotes for strings
+  - Trailing commas: "es5"
+
+### 1.2 Naming Conventions
+- Use camelCase for variable and function names.
+- Use PascalCase for React component names.
+- Prefix hooks with "use" (e.g., `useFetchData`).
+- File names should match the component name and use PascalCase (e.g., `MyComponent.js`).
+
+### 1.3 File Organization
+- Organize components in a `components` directory.
+- Place pages under the `pages` directory, following Next.js conventions.
+- Use a `utils` directory for utility functions.
+- Group related files (e.g., components, styles, tests) in their respective folders.
+
+## 2. Best Practices
+
+### 2.1 Code Quality Standards
+- All code should be reviewed via pull requests before merging.
+- Adhere to ESLint rules; use the recommended configuration for React and Next.js.
+- Avoid magic numbers and strings; define constants for reusable values.
+
+### 2.2 Performance Considerations
+- Use React's `memo` and `useMemo` for performance optimization where necessary.
+- Minimize re-renders by using functional components and hooks effectively.
+
+## 3. Testing Patterns
+
+### 3.1 Testing Conventions
+- Use Jest for unit testing and React Testing Library for component testing.
+- Aim for at least 80% code coverage.
+- Write tests for all new features and bug fixes.
+- Organize test files alongside their respective components with a `.test.js` suffix (e.g., `MyComponent.test.js`).
+
+### 3.2 End-to-End Testing
+- Use Cypress for end-to-end testing to cover critical user flows.
+- Maintain a dedicated `cypress` directory for all related tests.
+
+## 4. Documentation Standards
+
+### 4.1 Comment Requirements
+- Use JSDoc for documenting functions and components.
+- Provide clear and concise comments explaining complex logic or decisions.
+- Ensure that all public functions and components are documented.
+
+### 4.2 README and Project Documentation
+- Maintain an up-to-date README.md file with project setup instructions, usage, and contribution guidelines.
+- Create a `docs` directory for any additional documentation needed for the project.
+

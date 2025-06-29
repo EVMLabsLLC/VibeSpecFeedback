@@ -1,0 +1,73 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+---
+alwaysApply: true
+description: "MDC rules for a feedback platform MVP, outlining architecture, key decisions, domain context, and project structure."
+---
+
+# Project Overview
+
+This document outlines the architecture and business logic for a feedback platform designed to allow users to easily log feedback, request features, and report bugs or issues. The solution is built using Next.js and shadcn/ui, providing a simple and user-friendly interface without requiring user authentication.
+
+## High-Level Architecture
+
+The architecture consists of a client-side application powered by Next.js. The application will utilize the following components:
+
+- **Frontend**: Built with Next.js, facilitating server-side rendering and static site generation for performance and SEO.
+- **UI Library**: Integration with shadcn/ui for reusable and customizable UI components that enhance user experience.
+- **Data Management**: Simple state management to handle feedback submissions, feature requests, and upvotes without complex backend logic.
+
+## Business Logic
+
+1. **User Interaction**: Users can submit feedback or requests without logging in, enhancing accessibility and user engagement.
+2. **Feedback Categories**: Each post can be tagged with predefined categories (e.g., "Feature Request", "Bug", "Issue") to streamline organization and visibility.
+3. **Voting Mechanism**: Users can upvote requests or issues to highlight the most critical needs, enabling prioritization of features and improvements based on community interest.
+
+# Key Decisions
+
+- **No Authentication**: The decision to avoid user accounts simplifies the user experience and encourages feedback submission.
+- **Tagging System**: Implementing a tagging system allows users to quickly identify the nature of posts and search for specific types of feedback.
+- **Static Hosting with SSR**: Utilizing Next.js’s capabilities for static generation and server-side rendering to ensure fast load times and improved SEO for public feedback visibility.
+
+# Domain Context
+
+## Business Rules
+- Users must be able to submit feedback without an account.
+- Each feedback entry must have at least one tag from the predefined list to ensure clarity.
+- Upvotes can only be cast once per user per feedback item to prevent manipulation.
+
+## Constraints
+- The platform must handle a growing number of feedback entries efficiently.
+- The UI must remain responsive and user-friendly across all devices.
+- Data persistence is required for feedback submissions and votes, with a plan for future database integration.
+
+# Project Structure
+
+The following is a recommended folder organization for the project:
+
+```
+/feedback-platform
+│
+├── /public               # Static assets
+│
+├── /src
+│   ├── /components       # Reusable UI components (shadcn/ui)
+│   ├── /pages            # Next.js pages (routes)
+│   ├── /styles           # Global styles and CSS modules
+│   ├── /utils            # Utility functions and helpers
+│   └── /hooks            # Custom React hooks for state management
+│
+├── /data                 # Sample data and mock responses (for MVP)
+│
+├── /tests                # Unit and integration tests
+│
+├── .env                  # Environment variables configuration
+├── package.json          # NPM dependencies
+└── README.md             # Project documentation
+```
+
+This structure promotes a clean separation of concerns and facilitates easy maintenance and scalability as the project evolves.
