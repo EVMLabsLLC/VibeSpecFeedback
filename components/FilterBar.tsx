@@ -73,11 +73,7 @@ export default function FilterBar({
             variant={!hasActiveFilters ? "default" : "outline"}
             size="sm"
             onClick={handleClearAll}
-            className={`flex items-center space-x-1 text-xs sm:text-sm px-2 sm:px-3 h-8 sm:h-9 ${
-              !hasActiveFilters 
-                ? 'bg-purple-600 hover:bg-purple-700 text-white' 
-                : ''
-            }`}
+            className="flex items-center space-x-1 text-xs sm:text-sm px-2 sm:px-3 h-8 sm:h-9"
           >
             <span>All</span>
             <Badge 
@@ -100,11 +96,7 @@ export default function FilterBar({
                 variant={isActive ? "default" : "outline"}
                 size="sm"
                 onClick={() => handleFilterToggle(tag)}
-                className={`flex items-center space-x-1 text-xs sm:text-sm px-2 sm:px-3 h-8 sm:h-9 ${
-                  isActive 
-                    ? 'bg-purple-600 hover:bg-purple-700 text-white' 
-                    : ''
-                }`}
+                className="flex items-center space-x-1 text-xs sm:text-sm px-2 sm:px-3 h-8 sm:h-9"
                 disabled={count === 0}
                 title={tag} // Show full tag name on hover
               >

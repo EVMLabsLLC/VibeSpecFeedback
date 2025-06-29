@@ -270,14 +270,14 @@ export default function FeedbackList({ refreshTrigger, onOpenModal }: FeedbackLi
                         size="sm"
                         onClick={() => handleVote(item.id)}
                         disabled={!user || votingStates[item.id]}
-                        className="flex-col h-auto min-w-[60px] sm:min-w-[70px] px-2 py-2 touch-target flex-shrink-0"
+                        className="flex-col h-auto min-w-[44px] px-1.5 py-1.5 text-xs flex-shrink-0"
                       >
                         {votingStates[item.id] ? (
-                          <Loader2 className="h-4 w-4 animate-spin" />
+                          <Loader2 className="h-3 w-3 animate-spin" />
                         ) : (
-                          <ArrowUp className="h-4 w-4" />
+                          <ArrowUp className="h-3 w-3" />
                         )}
-                        <span className="text-xs font-medium mt-1">
+                        <span className="text-xs font-medium mt-0.5">
                           {item.upvotes}
                         </span>
                       </Button>

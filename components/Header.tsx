@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useAuth } from "@/lib/auth";
 import { Button } from "@/components/ui/button";
 import AuthModal from "@/components/AuthModal";
@@ -23,7 +24,7 @@ export default function Header() {
       <header className="glass-effect sticky top-0 z-50 border-b">
         <div className="container mx-auto px-3 sm:px-4 h-14 sm:h-16 flex items-center justify-between">
           <div className="flex items-center space-x-2 sm:space-x-4 min-w-0 flex-1">
-            <div className="flex items-center space-x-2 sm:space-x-3 min-w-0">
+            <Link href="/" className="flex items-center space-x-2 sm:space-x-3 min-w-0 hover:opacity-80 transition-opacity cursor-pointer">
               <div className="relative flex-shrink-0">
                 <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-r from-primary to-blue-600 rounded-xl flex items-center justify-center shadow-lg">
                   <MessageSquare className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
@@ -34,7 +35,7 @@ export default function Header() {
                 <h1 className="text-base sm:text-xl font-bold gradient-text truncate">feedback.vibespec</h1>
                 <p className="text-xs text-muted-foreground leading-none hidden sm:block">Community Feedback</p>
               </div>
-            </div>
+            </Link>
           </div>
           
           <nav className="flex items-center space-x-2 sm:space-x-4 flex-shrink-0">
